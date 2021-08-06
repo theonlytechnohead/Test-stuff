@@ -18,10 +18,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-
-	}
-
-	void FixedUpdate() {
 		transform.position = Vector3.Lerp(transform.position, transform.position + transform.forward * move.y * moveSpeed, Time.deltaTime);
 		var rot = transform.rotation.eulerAngles;
 		rot.y = Mathf.LerpAngle(rot.y, rot.y + move.x * rotationSpeed * move.y, Time.deltaTime);
